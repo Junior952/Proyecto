@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'JavaScript/inicio.js' %}"></script>
+{% endblock %}
+
+
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
+
+
+<main>
+    <!-- Sección con imagen de fondo -->
+    <section class="background-section">
+        <div class="content-wrapper">
+            <div class="carousel-container">
+                <!-- Carrusel de imágenes -->
+                <div class="carousel">
+                    <img src="{% static 'images/biciAzul.jpeg' %}" alt="Bicicleta 1">
+                    <img src="{% static 'images/image1.jpeg' %}" alt="Bicicleta 2">
+                    <img src="{% static 'images/image2.jpeg' %}" alt="Bicicleta 3">
+                    <img src="{% static 'images/image3.jpeg' %}" alt="Bicicleta 4">
+                </div>
+            </div>
+            <div class="text-container">
+                <h2>"En DonaldBikes, te acompañamos a explorar cualquier terreno con la seguridad y calidad que mereces. ¡Vive la aventura al máximo!"</h2>
+                <button>Ver más</button>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Sección de video -->
+    <section class="video-section">
+        <div class="text-container-video">
+            <h2>Descubre el Poder de la Bicicleta</h2>
+            <p>Las bicicletas no son solo un medio de transporte; son una forma de vida. En DonaldBikes, creemos en el poder transformador de cada pedalada.</p>
+            <p>Explora nuestras colecciones, personaliza tu bicicleta ideal y únete a una comunidad apasionada por la libertad y la velocidad.</p>
+        </div>
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="{% static 'videos/videoMTB.mp4' %}" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+    </section>
+
+    <!-- Sección de seguridad -->
+    <section class="seguridad-section">
+        <h2>Acompaña esas aventuras con la mejor seguridad</h2>
+        
+        <div class="imagen-con-texto">
+            <img src="{% static 'images/casco.jpg' %}" alt="Imagen 1">
+            <div class="texto-imagen texto-derecha">
+                <h3>Protección Integral</h3>
+                <p>Casco de alta resistencia para cualquier terreno.</p>
+            </div>
+        </div>
+        
+        <div class="imagen-con-texto imagen-derecha">
+            <img src="{% static 'images/guantes.jpg' %}" alt="Imagen 2">
+            <div class="texto-imagen texto-izquierda">
+                <h3>Comodidad y Estilo</h3>
+                <p>Guantes ergonómicos que se adaptan a tus necesidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador Gris -->
+    <section class="separador-gris">
+        <div class="text-separador-gris">
+            <h1>"También Estamos Contigo en Cada Ruta"</h1>
+        </div>
+    </section>
+
+    <!-- Sección de exploración -->
+    <section class="secondary-background-section">
+        <div class="secondary-content-wrapper">
+            <div class="secondary-text-container">
+                <h2>Explora Nuevas Aventuras</h2>
+                <p>Descubre nuestras bicicletas diseñadas para desafiar cualquier terreno. Ya sea que busques velocidad en la carretera o aventura en la montaña, tenemos la bicicleta perfecta para ti.</p>
+                <button>Explorar</button>
+            </div>
+            <div class="secondary-carousel-container">
+                <!-- Segundo carrusel de imágenes -->
+                <div class="carousel secondary-carousel">
+                    <img src="{% static 'images/trek1.jpg' %}" alt="Bicicleta Aventura 1">
+                    <img src="{% static 'images/trek2.jpeg' %}" alt="Bicicleta Aventura 2">
+                    <img src="{% static 'images/trek4.jpg' %}" alt="Bicicleta Aventura 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segundo Separador Gris -->
+    <section class="segundo-separador-gris">
+        <div class="text-segundo-separador-gris">
+            <h1>"Los Componentes que tu Elijas"</h1>
+        </div>
+    </section>
+
+    <!-- Sección de imágenes -->
+    <section class="seccion-imagenes">
+        <div class="contenedor-central">
+            <div class="contenedor-imagen izquierda"></div>
+            <div class="contenedor-imagen derecha"></div>
+        </div>
+    </section>
+
+    <!-- Tercer Separador Gris -->
+    <section class="tercer-separador-gris">
+        <div class="text-tercer-separador-gris">
+            <h1>Los Mejores Accesorios</h1>
+        </div>
+        <div class="imagen-oscura">
+            <img src="{% static 'images/jerseyAzulSinfondo.png' %}" alt="Jersey Azul">
+            <img src="{% static 'images/jerseyBlancoNegro.png' %}" alt="Jersey Blanco y Negro">
+            <img src="{% static 'images/jerseyTroyLee.png' %}" alt="Jersey Troy Lee">
+            <img src="{% static 'images/jerseyNegroMangaNaranja.png' %}" alt="Jersey Negro con Naranja">               
+        </div>
+    </section>
+</main>
+
+{% endblock %}

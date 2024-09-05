@@ -1,0 +1,148 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Efecto hover en todo el documento */
+a {
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+body, h1, a{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #000a1f, #0055a0, #000a1f); /* Gradiente horizontal con tonos de azul más oscuros */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+header.shrink {
+    height: 60px;
+    padding: 5px 20px;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+header.shrink .logo img {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Efecto hover en los botones del menú */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #9fd2ff, #1300bd);
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    left: 0;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Submenú */
+nav ul li:hover .submenu {
+    visibility: visible; /* Hace visible el submenú */
+    opacity: 1; /* Lo hace opaco */
+    transition-delay: 0s; /* Elimina cualquier retraso en la transición */
+}
+
+.submenu {
+    display: block; /* Cambiado para hacer ajustes de visibilidad con opacity */
+    visibility: hidden; /* Oculta el submenú visualmente pero mantiene su espacio */
+    opacity: 0; /* Transparente */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0a002d;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s; /* Añade transición para la visibilidad */
+}
+
+/* Efecto de aparición del submenú */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos de los enlaces del submenú */
+.submenu li a {
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submenu li a:hover {
+    background-color: #1300bd;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000a1f;
+    color: #fff;
+}
+
